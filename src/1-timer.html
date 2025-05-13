@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5em;
+            letter-spacing: 0.04em;
+            color: #000;
+
+        }
+
+
+        input {
+            display: inline-block;
+            width: 272px;
+            height: 40px;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #808080;
+        }
+
+        input:hover {
+            border: 1px solid #000000;
+        }
+
+        input:active {
+            border: 1px solid #4E75FF;
+        }
+
+        input:disabled {
+            border: 1px solid #808080;
+            background-color: #fafafa;
+        }
+
+        button {
+            display: inline-block;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4E75FF;
+            color: #ffffff;
+        }
+
+        button:hover {
+            background-color: #6C8CFF;
+        }
+
+        button:disabled {
+            background-color: #cfcfcf;
+            color: #989898;
+
+        }
+
+        .timer {
+            display: flex;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 24px;
+        }
+
+        .value {
+            font-size: 40px;
+            line-height: 1.2em;
+            color: #2e2f42;
+        }
+
+        .label {
+            color: #2e2f42;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="datetime-picker" />
+    <button type="button" data-start>Start</button>
+
+    <div class="timer">
+        <div class="field">
+            <span class="value" data-days>00</span>
+            <span class="label">Days</span>
+        </div>
+        <div class="field">
+            <span class="value" data-hours>00</span>
+            <span class="label">Hours</span>
+        </div>
+        <div class="field">
+            <span class="value" data-minutes>00</span>
+            <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+            <span class="value" data-seconds>00</span>
+            <span class="label">Seconds</span>
+        </div>
+    </div>
+    <script src="./js/1-timer.js" type="module"></script>
+</body>
+
+</html>
